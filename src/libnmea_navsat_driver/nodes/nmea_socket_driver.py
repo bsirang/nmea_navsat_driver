@@ -81,7 +81,8 @@ def main(args=None):
                 data_list = data.decode("ascii").strip().split("\n")
 
                 for data in data_list:
-
+                    # We may still have some stray whitespace such as "\r" characters
+                    data = data.strip()
                     try:
                         driver.add_sentence(data, frame_id)
                     except ValueError as e:
