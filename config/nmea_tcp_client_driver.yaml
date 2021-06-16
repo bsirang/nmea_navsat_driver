@@ -4,3 +4,4 @@ nmea_navsat_driver:
     port: 9001
     buffer_size: 4096
     timeout_sec: 2
+    frame_id: "base_link"
